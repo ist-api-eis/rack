@@ -305,7 +305,7 @@ module Rack
       #   precede those with less specific.  Ordering with respect to other
       #   attributes (e.g., Domain) is unspecified.
       return {} unless string
-      cookies.each { |k,v| hash[k] = Array === v ? v.first : v }	      string.split(/[;,] */n).each do |cookie|
+      string.split(/[;,] */n).each do |cookie|
         next if cookie.empty?
         key, value = cookie.split('=', 2)
         hash[key] = (Rack::Utils.unescape(value) rescue value) unless hash.key?(key)
