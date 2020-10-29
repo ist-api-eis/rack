@@ -4,7 +4,7 @@ gemspec
 
 # Rake 11+ is Ruby 1.9+ only. Stick with 10.x to avoid awkward Bundler
 # platform and RUBY_VERSION gymnastics, or separate Gemfiles.
-gem "rake", "< 11.0"
+gem "rake", "~> 12.3.3"
 
 # What we need to do here is just *exclude* JRuby, but bundler has no way to do
 # this, because of some argument that I know I had with Yehuda and Carl years
